@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './components/Profile'
+
+
 
 function App() {
+  // we want to pas this data down to the Profile component
+  const otherProfile = {
+      name:'Rocco',
+      email: 'rocco@ga.co'
+  }
+
   return (
+  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Congo Basin</h1>
+      <h6>(amazon clone)</h6>
+      <Profile other={otherProfile}></Profile>
     </div>
   );
 }
